@@ -7,7 +7,7 @@ A learnable LSB function is a LSB function trained by machine learning methods:
 
 - A Siamese neural network is used as a training framework in which the inner model is an inception neural network. The inception neural network merges a set of CNNs that adopt various sizes of kernels to capture kmer features.
 
-- A loss function on sample $(s,t,y)$ in training set $T$: $L := \textstyle \sum_\lbrace(s,t,y)\in T\rbrace L(s,t,y)$, where $y \in \lbrace1, -1\rbrace$ indicating whether $edit(s,t) \le d_1$, in which case $y = -1$, or whether $edit(s,t) \ge d_2$, in which case $y = 1$. Refer to the manuscript for more details.
+- A loss function on sample $(s,t,y)$ in training set $T$: $L := \textstyle \sum_\lbrace(s,t,y)\in T\rbrace  L(s,t,y)$, where $y \in \lbrace1, -1\rbrace$ indicating whether $edit(s,t) \le d_1$, in which case $y = -1$, or whether $edit(s,t) \ge d_2$, in which case $y = 1$. Refer to the manuscript for more details.
 
 Examples
 ==============
