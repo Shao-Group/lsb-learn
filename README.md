@@ -12,6 +12,6 @@ A learnable LSB function is that building a LSB function by utilizing machine le
 Examples
 ==============
 
-The `siaincp_runner.py` is a trainer for Siamese Neural Network.
+The codes of all the functions (including losses, evaluations, and so on) and model structure are in `siacnn_models_gpu.py`. The `siaincp_runner.py` is a trainer for Siamese Neural Network.
 
 `tester.py` in `seq_n20/functions` is a small example of testing data `seq-n20-ED15-2.txt` for the trained models stored in `trained models`.
