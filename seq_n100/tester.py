@@ -9,7 +9,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, Dataset
 import numpy as np
 
-from siacnn_models_gpu2 import *
+from siacnn_models_gpu import *
 
 #setting d1, d2
 d1 = 5
