@@ -1,7 +1,7 @@
 Introduction
 ==============
 
-- A learnable LSB function is an [LSB function](https://github.com/Shao-Group/lsbucketing) trained by machine learning methods:
+A learnable LSB function is an [LSB function](https://github.com/Shao-Group/lsbucketing) trained by machine learning methods:
 
 - A Siamese neural network is used as a training framework in which the inner model is an inception neural network. The inception neural network merges a set of CNNs that adopt various sizes of kernels to capture kmer features.
 
