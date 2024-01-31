@@ -11,7 +11,7 @@ import numpy as np
 import editdistance as ed
 from siacnn_models_gpu import *
 
-#################parameters of d1, d2################
+#setting d1, d2
 d1 = 1
 d2 = 2
 
@@ -24,15 +24,12 @@ test_a, test_b, test_t, test_y = aby_sep(df2)
 test_t = torch.tensor(test_t)
 test_y = torch.tensor(test_y)
 
-#################parameters of k, m and others################
-out_dim = 800
+#setting of k, m, batchsize
 num_b = 20
 m_dim = 40
-flat_dim = 2320
 batch_size = 20000
 th_x = 0.5
-
-######################################
+##################### Model uploading #################
 
 cnnk = torch.load('~/trained_model/cnn2_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.pt')
 siacnn = torch.load('~/trained_model/siacnn2_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.pt')
@@ -46,7 +43,7 @@ print('acc_'+str(d1)+'-'+str(d2)+'eds_'+str(num_b)+'k_'+str(m_dim)+'m_bl')
 
 print('acc_test:', acc_t)
 
-print('###################BD output###############################')
+print('###################BreakDown Acc###############################')
 
 
 ####
