@@ -17,9 +17,9 @@ Examples
 - Model Training:
 The codes of all the functions (including losses, evaluations, and so on) and model structure are in `siacnn_models_gpu.py`. The `siaincp_runner.py` is a trainer for Siamese Neural Network. The parameters are easily modified in the code, as shown in the files. To train a model with the command:
 
-`python siaincp_runner.py`
+    `python siaincp_runner.py`
 
 - Testing:
-`tester.py` in `seq_n20/functions` is a small example of testing data `seq-n20-ED15-2.txt` for the trained models stored in `trained models` with the command:
+`tester.py`[https://github.com/Shao-Group/lsb-learn/blob/master/seq_n20/functions/tester.py] in `seq_n20/functions` is a small example of testing data `seq-n20-ED15-2.txt` for the trained models stored in `trained models` with the command:
 
-`python tester.py`
+    `python tester.py`
