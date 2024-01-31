@@ -20,6 +20,6 @@ The codes of all the functions (including losses, evaluations, and so on) and mo
     `python siaincp_runner.py`
 
 - Testing:
-`tester.py`(https://github.com/Shao-Group/lsb-learn/blob/master/seq_n20/functions/tester.py) in `seq_n20/functions` is a small example of testing data `seq-n20-ED15-2.txt` for the trained models stored in `trained models` with the command:
+[tester.py](https://github.com/Shao-Group/lsb-learn/blob/master/seq_n20/functions/tester.py) in `seq_n20/functions` is a small example of testing data `seq-n20-ED15-2.txt` for the trained models stored in `trained models` with the command:
 
     `python tester.py`
