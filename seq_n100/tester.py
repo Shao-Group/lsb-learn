@@ -11,7 +11,7 @@ import numpy as np
 
 from siacnn_models_gpu2 import *
 
-#################parameters of d1, d2################
+#setting d1, d2
 d1 = 5
 d2 = 6
 
@@ -25,19 +25,17 @@ test_a, test_b, test_t, test_y = aby_sep(df2)
 test_t = torch.tensor(test_t)
 test_y = torch.tensor(test_y)
 
-#################parameters of k, m and others################
-out_dim = 5000
+#setting of k, m, batchsize
 num_b = 50
 m_dim = 100
-flat_dim = 7488
 batch_size = 5000
 th_x = 0.5
-######################################
+##################### Model uploading #################
 
 cnnk = torch.load('~/incp12x2'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.pt')
 siacnn = torch.load('~/siacnn12x2_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.pt')
 
-#############################################
+#######################################OUTPUT############################################################
 print('Results n = 100:')
 
 acc_t = acc_test_batch(test_a, test_b, test_y, batch_size, siacnn, th_x, m_dim, num_b, device)
@@ -46,7 +44,7 @@ print('acc'+str(d1)+'-'+str(d2)+'eds_'+str(num_b)+'k_'+str(m_dim)+'m')
 
 print('acc_test:', acc_t)
 
-print('###################BD output###############################')
+print('###################BreakDown Acc###############################')
 
 ####
 print('bd_acc_('+str(d1)+','+str(d2)+')-eds_'+str(num_b)+'k_'+str(m_dim)+'m'+'_test')
