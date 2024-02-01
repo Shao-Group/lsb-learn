@@ -39,11 +39,11 @@ use command:
 
 - Testing and hashcode generating.
 [tester.py](https://github.com/Shao-Group/lsb-learn/blob/master/seq_n20/functions/tester.py)
-is a quick example of testing data `seq-n20-ED15-2.txt` for the trained models
+is a quick example of testing data `seq-n20-ED15-2.txt` for the pretained models
 stored in `trained models` and generating the hash code with the command;
 hash codes will be stored in a file named `hashcode_20k_40m_(d1,d2)s.hdf5`.
 
     `python tester.py`
 
 - Pre-trained models. More pre-trained models are available at 
-[zenodo](http://zenodo.org).
+`zenodo DOI:10.5281/zenodo.10607157`.
