@@ -61,7 +61,7 @@ res = breakdown_acc(eds, d1, d2, siacnn, batch_size, th_x, m_dim, num_b, device)
 
 hash_a, hash_b = matrixes_maker(test_a, test_b, batch_size)
 
-f = h5py.File('hashcode_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.hdf5', 'w')
+f = h5py.File('hashcode_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+','+str(d2)+')s.hdf5', 'w')
 
 f.create_dataset('hash_a', data=np.array(hash_a.to('cpu')))
 f.create_dataset('hash_b', data=np.array(hash_b.to('cpu')))
