@@ -31,8 +31,8 @@ batch_size = 20000
 th_x = 0.5
 ##################### Model uploading #################
 
-cnnk = torch.load('~/trained_model/cnn2_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.pt')
-siacnn = torch.load('~/trained_model/siacnn2_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.pt')
+cnnk = torch.load('~/trained_model/cnn2_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s_10xs.pt')
+siacnn = torch.load('~/trained_model/siacnn2_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s_10xs.pt')
 
 #######################################TESTING############################################################
 print('Results n = 20:')
@@ -56,4 +56,17 @@ for i in sorted(eds.keys()):
     ed_num_test.append([i, len(eds[i])])
 
 res = breakdown_acc(eds, d1, d2, siacnn, batch_size, th_x, m_dim, num_b, device)
+
+#hash code generating
+
+hash_a, hash_b = matrixes_maker(test_a, test_b, batch_size)
+
+f = h5py.File('hashcode_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.hdf5', 'w')
+
+f.create_dataset('hash_a', data=np.array(hash_a.to('cpu')))
+f.create_dataset('hash_b', data=np.array(hash_b.to('cpu')))
+
+f.close()
+
+
 

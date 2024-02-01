@@ -476,7 +476,31 @@ def hash_coding(a_set, th, m_dim, num_b, device):
     hash_a = round_0(a_set, th, device)
     return hash_a
 
+
+def matrixes_maker(seq_a, seq_b, batch_size):
+
+   hash_a = []
+   hash_b = []
+   for i in range(int(len(seq_a)/batch_size)):
+
+      mini_inputa1 = mini_batch_cnn1(seq_a, i, batch_size)
+      mini_inputb1 = mini_batch_cnn1(seq_a, i, batch_size)
+
+      out1, out2 = siacnn(mini_inputa1.to(device), mini_inputb1.to(device))
+
+      hash_1 = hash_coding(out1, 0.5, m_dim, num_b, device)
+      hash_2 = hash_coding(out2, 0.5, m_dim, num_b, device)
+
+      hash_a.append(hash_1)
+      hash_b.append(hash_2)
+
+   hash_a = torch.cat(([i for i in hash_a]), 0)
+   hash_b = torch.cat(([i for i in hash_b]), 0)
+
+   return hash_a, hash_b
+
 ###########Breakdown Acc##########
+
 import editdistance as ed
 
 def hamming_distance(chaine1, chaine2):
