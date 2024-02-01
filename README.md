@@ -4,7 +4,7 @@ Introduction
 This repo hosts source code to train locality-sensitive bucketing (LSB) functions.
 A bucketing function $f$ maps a length-$n$ string to a set of hash-codes (instead of one hash-code).
 A bucketing function $f$ is said to be $(d_1, d_2)$-sensitive,
-if for any two strings $s, t$ it satisfies: if the edit distance between $s$ and $t$ 
+if for any two length-n strings $s$ and $t$, $f$ satisfies: if the edit distance between $s$ and $t$ 
 is less than or equal to $d_1$, then $f(s)$ and $f(t)$ share at least one hash-code,
 and if the edit distance between $s$ and $t$ 
 is greater than or equal to $d_2$, then $f(s)$ and $f(t)$ will not share any hash-code.
@@ -23,12 +23,10 @@ Usage
 - Environment: python vision >= 3.6
 
 - Data simulation.
-Codes in `/simulation` can generate a set of random pairs of length-$n$ sequences
+Codes in `/simulation` can generate a set of random pairs of length-n strings
 $(s,t)$  with various edit distances as needed. 
-Given a $d_1, d_2$, training samples consist of $\{(s,t,y)\}$,
- where $y \in \lbrace1, -1\rbrace$ indicating
-whether $edit(s,t) \le d_1$, in which case $y = -1$, or whether $edit(s,t) \ge
-d_2$, in which case $y = 1$.
+Given $d_1, d_2$, training samples consist of tuples $\{(s,t,y)\}$,
+$y = -1$ if $edit(s,t) \le d_1$ and $y = 1$ if $edit(s,t) \ge d_2$.
 
 - Model training. Codes for $n = 20$ and $n=100$ are put in separate folders.
 `siacnn_models_gpu.py` is a function library (including losses, evaluations,
@@ -43,11 +41,8 @@ use command:
 [tester.py](https://github.com/Shao-Group/lsb-learn/blob/master/seq_n20/functions/tester.py)
 is a quick example of testing data `seq-n20-ED15-2.txt` for the trained models
 stored in `trained models` and generating the hash code with the command:
-
     `python tester.py`
-
 Hash codes will be stored in a file named `hashcode_20k_40m_(d1,d2)s.hdf5`.
-
 
 - Pre-trained models. More pre-trained models are available at 
 [zenodo](http://zenodo.org).
