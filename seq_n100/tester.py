@@ -32,8 +32,8 @@ batch_size = 5000
 th_x = 0.5
 ##################### Model uploading #################
 
-cnnk = torch.load('~/incp12x2'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.pt')
-siacnn = torch.load('~/siacnn12x2_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.pt')
+cnnk = torch.load('~/incp8x3'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.pt')
+siacnn = torch.load('~/siacnn8x3_'+str(num_b)+'k_'+str(m_dim)+'m_('+str(d1)+'-'+str(d2)+')s.pt')
 
 #######################################OUTPUT############################################################
 print('Results n = 100:')
