@@ -34,6 +34,7 @@ model structures and generating hash code) awaiting import. The
 `siaincp_runner.py` is a trainer for Siamese Neural Network. Parameters are
 easily modified in the files following the annotations. To train a model, 
 use command:
+
     `python siaincp_runner.py`
 
 - Testing and hashcode generating.
