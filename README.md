@@ -2,7 +2,7 @@ Introduction
 ==============
 
 This repo hosts source code to train locality-sensitive bucketing (LSB) functions.
-A bucketing function $f$ maps a length-$n$ string to a set of hash-codes (instead of one hash-code).
+A bucketing function $f$ maps a length $n$ string to a set of hash-codes (instead of one hash-code).
 A bucketing function $f$ is said to be $(d_1, d_2)$-sensitive,
 if for any two length-n strings $s$ and $t$, $f$ satisfies: if the edit distance between $s$ and $t$ 
 is less than or equal to $d_1$, then $f(s)$ and $f(t)$ share at least one hash-code,
