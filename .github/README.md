@@ -25,4 +25,4 @@ Codes in `/simulation` can generate a set of random pairs of length-n sequences 
 
     `python tester.py`
 
-Hash codes and corresponding seqs will be stored in a file named `hashcode_20k_40m_(d1, d2)s.csv`.
+Hash codes will be stored in a file named `hashcode_20k_40m_(d1,d2)s.hdf5`.
