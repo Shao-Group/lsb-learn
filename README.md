@@ -34,14 +34,12 @@ model structures and generating hash code) awaiting import. The
 `siaincp_runner.py` is a trainer for Siamese Neural Network. Parameters are
 easily modified in the files following the annotations. To train a model, 
 use command:
-
-    `python siaincp_runner.py`
-
+    ```python siaincp_runner.py```
 - Testing and hashcode generating.
 [tester.py](https://github.com/Shao-Group/lsb-learn/blob/master/seq_n20/functions/tester.py)
 is a quick example of testing data `seq-n20-ED15-2.txt` for the trained models
 stored in `trained models` and generating the hash code with the command:
-    `python tester.py`
+    ```python tester.py```
 Hash codes will be stored in a file named `hashcode_20k_40m_(d1,d2)s.hdf5`.
 
 - Pre-trained models. More pre-trained models are available at 
