@@ -46,4 +46,4 @@ hash codes will be stored in a file named `hashcode_20k_40m_(d1,d2)s.hdf5`.
     `python tester.py`
 
 - Pre-trained models. More pre-trained models are available at 
-`zenodo DOI:10.5281/zenodo.10607157`.
+[zenodo](https://zenodo.org/records/10655349).
